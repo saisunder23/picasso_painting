@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background: #333;
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.gallery div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.big-circle {
+    width: 150px;
+    height: 150px;
+    background: red;
+    border-radius: 50%;
+    z-index: 1;
+    margin: 10px;
+}
+
+.small-circle {
+    width: 50px;
+    height: 50px;
+    background: blue;
+    border-radius: 50%;
+    z-index: 2;
+    margin: 10px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+    z-index: 3;
+    margin: 10px;
+}
+
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background: purple;
+    z-index: 4;
+    margin: 10px;
+}
+
+.contact {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label, .contact input {
+    margin: 5px 0;
+}
+
+.contact input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .big-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .small-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .triangle {
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 80px solid green;
+    }
+
+    .rectangle {
+        width: 150px;
+        height: 75px;
+    }
+}
